@@ -1,0 +1,43 @@
+.nav {
+  background: $hoofdKleur;
+  &__label {
+    font-family: Fontawesome;
+    font-size: 1.5em;
+    display: block;
+    color: $achtergrondKleur;
+    padding: .2em .2em .2em 2rem;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__cb {
+    display: none;
+    &:checked ~ .nav__list {
+      display: none;
+    }
+  }
+  &__item {
+    display: block;
+    padding: 0.2em 2em;
+    text-decoration: none;
+    color: #ccc;
+    &:hover {
+      color: #fff;
+      background-color: $contrastKleur;
+    }
+    &--active {
+      background-color: $steunKleur2;
+      color: $hoofdKleur;
+      &:hover {
+        background-color: $steunKleur2;
+        color: $hoofdKleur;
+      }
+    }
+  }
+}

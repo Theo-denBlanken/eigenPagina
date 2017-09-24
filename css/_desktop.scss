@@ -1,0 +1,17 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__label {
+    display: none;
+  }
+  &__cb:checked ~ .nav__list {
+    display: flex;
+  }
+}
+
+.inhoud {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5%;
+}

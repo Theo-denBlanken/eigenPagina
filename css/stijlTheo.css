@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.nav {
+  background: #3646b0; }
+  .nav__label {
+    font-family: Fontawesome;
+    font-size: 1.5em;
+    display: block;
+    color: whitesmoke;
+    padding: .2em .2em .2em 2rem;
+    cursor: pointer; }
+    .nav__label:hover {
+      color: #fff; }
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .nav__cb {
+    display: none; }
+    .nav__cb:checked ~ .nav__list {
+      display: none; }
+  .nav__item {
+    display: block;
+    padding: 0.2em 2em;
+    text-decoration: none;
+    color: #ccc; }
+    .nav__item:hover {
+      color: #fff;
+      background-color: #72784a; }
+    .nav__item--active {
+      background-color: #afb8cf;
+      color: #3646b0; }
+      .nav__item--active:hover {
+        background-color: #afb8cf;
+        color: #3646b0; }
+
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: grid; }
+
+header {
+  color: whitesmoke;
+  background: #566ec8;
+  background: linear-gradient(-15deg, #72784a 10%, red 19%, #3646b0 40%, #566ec8 75%, #566ec8 77%, whitesmoke 100%); }
+
+h1 {
+  margin: 0;
+  padding: 2rem; }
+
+.tagline {
+  padding: 1rem 2rem; }
+
+/* de ringen   */
+.ringen {
+  width: 100%;
+  position: absolute;
+  top: 0; }
+
+.ring {
+  stroke: #566ec8;
+  stroke-width: 6;
+  fill: none;
+  mix-blend-mode: lighten; }
+
+.inhoud {
+  padding: 2rem; }
+  .inhoud__iframe {
+    width: 100%;
+    border: 0; }
+  .inhoud__a {
+    color: #45558E; }
+    .inhoud__ahover {
+      color: #72784a; }
+
+.afbreken {
+  word-break: break-all; }
+
+footer {
+  background: #3646b0;
+  color: #f2f3f5;
+  overflow: hidden;
+  padding: 1rem 2rem; }
+
+/* de social icons met BEM */
+.social {
+  background: #3646b0;
+  font-family: Fontawesome;
+  float: right; }
+  .social__item {
+    color: whitesmoke;
+    display: inline-block;
+    font-size: 1em;
+    padding: .3em;
+    text-decoration: none; }
+    .social__item:first-child {
+      margin-left: .5em; }
+    .social__item:last-child {
+      margin-right: .5em; }
+    .social__item:hover {
+      background-color: #72784a;
+      color: #fff; }
+    .social__item--twitter::before {
+      content: "\f081"; }
+    .social__item--github::before {
+      content: "\f092"; }
+    .social__item--facebook::before {
+      content: "\f082"; }
+    .social__item--google::before {
+      content: "\f0d4"; }
+
+.naarBoven {
+  text-align: right;
+  height: 3em; }
+  .naarBoven__link {
+    display: inline-block;
+    width: 2em;
+    font-family: Fontawesome;
+    text-decoration: none;
+    font-size: 2em;
+    color: #3646b0;
+    margin-left: 2%;
+    padding: .5em 2rem 0 0;
+    transition: padding .5s; }
+    .naarBoven__link:hover {
+      color: #566ec8;
+      padding: 0 2rem .5em 0;
+      color: #72784a; }
+
+@media screen and (min-width: 50em) {
+  .nav__list {
+    display: flex; }
+  .nav__label {
+    display: none; }
+  .nav__cb:checked ~ .nav__list {
+    display: flex; }
+
+  .inhoud {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5%; } }
+
+/*# sourceMappingURL=stijlTheo.css.map */

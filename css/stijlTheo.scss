@@ -1,0 +1,152 @@
+// kleurenschema delftsblauw
+// https://www.perron11.nl/home/showphoto/053453b3-2abf-4dc9-9a8d-81b846641c0c/home-schoolschrift-amsterdamse-grachtenpandjes-delfts-blauw-2.png
+// RGB
+// 54 62 114
+// 69 85 142
+// 144 157 192
+// 93 96 73
+// 242 243 245
+//
+// HEX
+// 363e72
+// 45558e
+// 909dc0
+// 5d6049
+// f2f3f5
+//
+// HSB
+// 232 53 45
+// 227 51 56
+// 224 25 75
+// 68  24 38
+// 220 1 96
+
+
+$hoofdKleur: hsl(232, 53%, 45%);
+$steunKleur: hsl(227, 51%, 56%);
+$steunKleur2: hsl(224, 25%, 75%);
+$contrastKleur: hsl(68, 24%, 38%);
+$achtergrondKleur: hsl(220, 1%, 96%);
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'navigatie';
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: grid;
+}
+
+header {
+  color: $achtergrondKleur;
+  background: $steunKleur;
+  background: linear-gradient(-15deg,$contrastKleur 10%,red 19%,$hoofdKleur 40%,$steunKleur 75%, $steunKleur 77%, $achtergrondKleur 100%);
+}
+h1 {
+  margin: 0;
+  padding: 2rem;
+}
+.tagline {
+  padding: 1rem 2rem;
+}
+
+/* de ringen   */
+.ringen {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.ring {
+  stroke: $steunKleur;
+  stroke-width: 6;
+  fill: none;
+  mix-blend-mode: lighten;
+}
+
+.inhoud {
+  padding: 2rem;
+
+  &__iframe {
+    width: 100%;
+    border: 0;
+  }
+  &__a {
+    color: #45558E;
+    &hover {
+      color: $contrastKleur;
+    }
+  }
+}
+.afbreken { // om lange woorden af te laten breken
+  word-break: break-all;
+}
+footer {
+  background: hsl(232, 53%, 45%);
+  color: #f2f3f5;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+/* de social icons met BEM */
+.social {
+  background: $hoofdKleur;
+  font-family: Fontawesome;
+  float: right;
+  &__item {
+    color: $achtergrondKleur;
+    display: inline-block;
+    font-size: 1em;
+    padding: .3em;
+    text-decoration: none;
+    &:first-child {
+      margin-left: .5em;
+    }
+    &:last-child {
+      margin-right: .5em;
+    }
+    &:hover {
+      background-color: $contrastKleur;
+      color: #fff;
+    }
+    &--twitter::before   { content: "\f081"; }
+    &--github::before    { content: "\f092"; }
+    &--facebook::before  { content: "\f082"; }
+    &--google::before    { content: "\f0d4"; }
+  }
+}
+.naarBoven {
+  text-align: right;
+  height: 3em;
+  &__link {
+    display: inline-block;
+    width: 2em;
+    font-family: Fontawesome;
+    text-decoration: none;
+    font-size: 2em;
+    color: $hoofdKleur;
+    margin-left: 2%;
+    padding: .5em 2rem 0 0;
+    transition: padding .5s;
+    &:hover {
+      color: $steunKleur;
+      padding: 0 2rem .5em 0;
+      color:$contrastKleur;
+    }
+  }
+}
+
+@media screen and (min-width: 50em) {
+  @import 'desktop';
+}

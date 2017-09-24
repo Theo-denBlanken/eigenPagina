@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <title>Frontend | Flexbox: een krachtig gereedschap</title>
+    <meta name="keywords" content="Frontend, HTML, CSS, JS">
+    <meta name="description" content="Lessen front-end voor mediadevelopers">
+    <meta name="author" content="Theo den Blanken">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stijlTheo.css">
+  </head>
+
+  <body lang="nl">
+
+    <header>
+      <h1 id="paginaKop" class="paginaKop">Kop 1</h1>
+      <div class="tagline" id="tagline">tagline</div>
+      <svg id="ringen" class="ringen"></svg>
+    </header>
+
+    <nav class="nav">
+      <label for="menu-toggle" class="nav__label">&#xf0c9;</label>
+      <input type="checkbox" id="menu-toggle" class="nav__cb" checked>
+      <ul class="nav__list">
+        <li>
+          <a class="nav__item nav__item--active" href=index.html>home</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#centreren">centreren</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#layout">grid layout</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#laatste">last child</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#sticky">stickey footer</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Flexbox</h3>
+          <p style="margin-top: 40px; padding-top: 10px; padding-bottom: 6em;">Een aantal oefeningen om practisch te oefenen met Flexbox.
+            <br>
+            Een presentatie met theorie en inspiratie:
+            <a class="afbreken inhoud__a" href="http://blanken5.home.xs4all.nl/presentatieFlexbox/presentatie.html">http://blanken5.home.xs4all.nl/presentatieFlexbox/presentatie.html</a>
+          </p>
+        </article>
+        <article class="inhoud__tekst">
+          <h3>Leerdoelen</h3>
+          <ul>
+            <li>display: flex</li>
+            <li>centreren met Flexbox</li>
+            <li>flex-richting</li>
+            <li>justify-content</li>
+            <li>align-items</li>
+            <li>flex</li>
+            <li>meerdere flex-stappen</li>
+            <li>order</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>Flexbox toepassingen 0: de opdracht (00:02:40)</h3>
+          <p>Flexbox is een krachtig gereedschap op layouts te verzorgen.
+            <br>
+            In deze reeks passen we flexbox onder andere toe om te centreren, een grid te bouwen en een sticky footer.</p>
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/ybh0uk8wiOM?rel=0"  allowfullscreen></iframe>
+
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+      <div class="inhoud" id="centreren">
+        <article class="inhoud__tekst">
+          <h3>Flexbox toepassingen 1: centreren (00:10:38)</h3>
+          Flexbox is heel geschikt om elementen te centreren.
+          <br>
+          Een kernbegrip is dat dit begint met
+          <code>display:flex;</code>. Bedenk dat als je deze eigenschap aan een element meegeeft, dit niet op de element zelf betrekking krijgt maar op zijn children.
+          <br>
+          Met
+          <code>justify-content: center;</code>
+          lijn je de elementen uit over de horizontale as (beter gezegd de as waarin de flex-richting is) en met
+          <code>align-items: center;</code>
+          de as daar loodrecht op.
+          <br>
+          Voor de verticale uitlijning is het is hier wel van belang dat het parent-element de volledige hoogte van het venster heeft.
+          <br>
+          Voor smalle viewports kan het ook nodig zijn dat de elementen onder elkaar kunnen. Dat kan met
+          <code>flex-wrap: wrap;</code>.
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/htUVnmTUQgc?rel=0"  allowfullscreen></iframe>
+
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+      <div class="inhoud" id="layout">
+        <article class="inhoud__tekst">
+          <h3>Flexbox toepassingen 2: grid-layout (00:17:38)</h3>
+          <p>Met Flexbox wordt een grid-layout gemaakt. Browsers, die flexbox gebruiken, kennen elementen eenvoudig dezelfde hoogte toe. Daardoor heb je niet de problemen zoals bij floatende elementen.
+            <br>
+            Met
+            <code>flex-wrap</code>
+            kunnen de children over meerdere regels worden verdeeld.
+            <br>
+            In dit voorbeeld kunnen ook children eigen flex-waarden krijgen. Daardoor kunnen ze verschillend ten opzichte van elkaar in breedte toenemen of afnemen en krijgt het geheel zijn flexibiliteit.
+          </p>
+
+          <p>Children die met flexbox zijn geplaatst, kunnen op hun beurt zelf ook weer children hebben, die een layout nodig hebben. In dit voorbeeld gebeurt dat en ze krijgen dus ook een
+            <code>display: flex;</code>
+            mee net als hun parent. Hier moet verticaal zaken op orde komen en daarom krijgen ze een
+            <code>flex-direction: column;</code>
+            voor hun children mee. Dat ziet er op het eerste gezicht hetzelfde uit, maar als de footer dan als enige een
+            <code>margin-top</code>
+            met de waarde
+            <code>auto</code>
+            krijgt, zal de inhoud dus overal op dezelfde horizontale lijn komen. In dit voorbeeld zijn dat de media-icons.
+          </p>
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/O-5c2mf95MI?rel=0"  allowfullscreen></iframe>
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+      <div class="inhoud" id="laatste">
+        <article class="inhoud__tekst">
+          <h3>Flexbox toepassingen 3: het laatste child (00:04:02)</h3>
+          <p>In een grid met meerdere regels is het eigenlijk toeval, als de laatste regel helemaal gevuld is. Dat kan dan leiden tot een afwijkende verdeling. Dit is op te lossen door een grote hoeveelheid lege elementen van dezelfde class-naam. Deze vullen
+            de laatste regel dan en degene die teveel zijn gaan vanzelf naar de volgende regel. Omdat die elementen leeg zijn zullen ze in een nieuwe regel niet zichtbaar zijn. Waar ze wel zichtbaar zijn door de andere achtergrondkleur kun je ze selecteren met
+            de pseudoselector
+            <code>:empty</code>
+            en ze transparant maken.
+          </p>
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/o4KDRLrzS2A?rel=0"  allowfullscreen></iframe>
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+      <div class="inhoud" id="sticky">
+        <article class="inhoud__tekst">
+          <h3>Flexbox toepassingen 4: sticky footer (00:15:44)</h3>
+          <p>Met flexbox maak je eenvoudig een sticky footer.
+            <br>
+            Zorg ervoor dat een element de inhoud inclusief de footer omvat.
+            <br>
+            Geef dat element een display: flex; met een
+            <code>flex-direction: column;</code>.
+            <br>
+            De hoogte van dat element moet minstens
+            <code>100vh</code>
+            zijn.
+            <br>
+            Het element dat de eigenlijke inhoud krijgt is een van de children van de omvattende div. Geef dit element een flex-waarde van
+            <code>1 0 auto</code>. Omdat de overige elementen niet groeien, wordt de hele ruimte opgevuld.
+            <br>
+            Bij toenemende inhoud zal de footer, die nu onder aan het venster staat wel zakken. Natuurlijk hebben het html en body-element geen padding of marge.
+            <br>
+            In dit document wordt er door een script elementen toegevoegd of verwijderd. deze elementen zijn gelijk, maar kunnen hun inhoud in volgorde laten wijzigen. Je kunt een element dat ge-flexd wordt, in de lay-out naar voren of achteren verschuiven. Dit
+            kan met de eigenschap
+            <code>order</code>. Een
+            <code>order</code>
+            die negatief is (-1, -2, ...) schuift het naar voren, een positieve waarde schuift het element naar achteren. Om de fragmenten afwisselend te selecteren gebruik je de selector
+            <code>:nth-child(2n+1)</code>.</p>
+          <p>Pas deze kennis van de sticky footer ook toe op de index-pagina waar de validatie-icons onderaan moeten komen.</p>
+          <p>Bonusopdracht: kun je zelf het Javascript zo schrijven dat je ook afwissellende inhoud met de knoppen kunt toevoegen?</p>
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/4s29raNJnEo?rel=0"  allowfullscreen></iframe>
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+      <!--
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h3>CSS animatie: de opdracht(00:02:47)</h3>
+          <p>
+
+          </p>
+        </article>
+        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/3mzzEMF17Z4?rel=0"  allowfullscreen></iframe>
+      </div>
+
+      <div class="naarBoven"><a href="#" class="naarBoven__link">&#xf151;</a></div>
+
+    -->
+
+      <hr>
+
+      <div class="inhoud">
+        <article class="inhoud__tekst">
+          <h4>Inleveren</h4>
+          <ul>
+            <li>Rond de vormgeving af zodat het vergelijkbaar in kwaliteit is in vergelijking met de eerste video.</li>
+            <li>Na afloop plaats je deze training online.</li>
+            <li>Valideer jouw pagina's op
+              <a href="http://validator.w3.org/">Markup Validation Service van W3C</a>.</li>
+            <li>Plaats daarvoor de validatie icoontjes in de footer.
+            </li>
+            <li>
+              De code hiervoor vind je bijvoorbeeld
+              <a href="https://github.com/Theo-denBlanken/validatie-W3C">
+                hier.</a>
+            </li>
+            <li>Plaats de link in ELO Magister.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="naarBoven">
+        <a href="#" class="naarBoven__link">&#xf151;</a>
+      </div>
+
+    </main>
+
+    <footer>
+
+      <span class="social">
+        Delen:
+        <a href="#" class="social__item social__item--facebook" id="fb_link"></a>
+        <a href="#" class="social__item social__item--google" id="gl_link"></a>
+        <a href="#" class="social__item social__item--twitter" id=twt_link></a>
+      </span>
+      <span>&copy; Theo den Blanken</span>
+    </footer>
+
+    <script src="scripts/social.js"></script>
+    <script src="scripts/headerAnimatie.js"></script>
+    <script src="scripts/hoogteYTframe.js"></script>
+    <script src="scripts/activeLink.js"></script>
+  </body>
+</html>
