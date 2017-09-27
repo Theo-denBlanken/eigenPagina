@@ -48,7 +48,10 @@ body {
   font-family: sans-serif;
   display: grid;
 }
-
+main {
+  max-width: 90em;
+  margin: 0 auto;
+}
 header {
   color: $achtergrondKleur;
   background: $steunKleur;

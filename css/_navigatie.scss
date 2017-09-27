@@ -1,5 +1,8 @@
 .nav {
   background: $hoofdKleur;
+  transition: top 1s;
+  position: relative;
+  top: auto;
   &__label {
     font-family: Fontawesome;
     font-size: 1.5em;
@@ -40,4 +43,24 @@
       }
     }
   }
+}
+
+.kleven {
+  position: fixed;
+  width: 100%;
+  animation: schuifNavIn .9s forwards;
+}
+.verbergen {
+  position: fixed;
+  width: 100%;
+  animation: schuifNavWeg .9s forwards;
+}
+
+@keyframes schuifNavIn {
+  0% {top: -2em}
+  100% {top: 0}
+}
+@keyframes schuifNavWeg {
+  0% {top: 0}
+  100% {top: -2em}
 }

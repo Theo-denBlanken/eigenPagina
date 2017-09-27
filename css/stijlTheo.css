@@ -5,7 +5,10 @@
   font-weight: normal;
   font-style: normal; }
 .nav {
-  background: #3646b0; }
+  background: #3646b0;
+  transition: top 1s;
+  position: relative;
+  top: auto; }
   .nav__label {
     font-family: Fontawesome;
     font-size: 1.5em;
@@ -38,6 +41,26 @@
         background-color: #afb8cf;
         color: #3646b0; }
 
+.kleven {
+  position: fixed;
+  width: 100%;
+  animation: schuifNavIn .9s forwards; }
+
+.verbergen {
+  position: fixed;
+  width: 100%;
+  animation: schuifNavWeg .9s forwards; }
+
+@keyframes schuifNavIn {
+  0% {
+    top: -2em; }
+  100% {
+    top: 0; } }
+@keyframes schuifNavWeg {
+  0% {
+    top: 0; }
+  100% {
+    top: -2em; } }
 html {
   margin: 0;
   padding: 0; }
@@ -47,6 +70,10 @@ body {
   padding: 0;
   font-family: sans-serif;
   display: grid; }
+
+main {
+  max-width: 90em;
+  margin: 0 auto; }
 
 header {
   color: whitesmoke;
