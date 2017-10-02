@@ -1,4 +1,4 @@
-// stop de linkjes van de naviagtie in een array
+// stop de linkjes van de navigatie in een array
 
 var linkjes = document.getElementsByClassName('nav__item');
 console.log('het menu: ' + linkjes[0]);

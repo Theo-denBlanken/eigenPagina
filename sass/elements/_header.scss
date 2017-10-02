@@ -1,0 +1,14 @@
+// de header zelf
+header {
+  color: $achtergrondKleur;
+  background: $steunKleur;
+  background: linear-gradient(-15deg,$contrastKleur 10%,red 19%,$hoofdKleur 40%,$steunKleur 75%, $steunKleur 77%, $achtergrondKleur 100%);
+}
+
+h1 {
+  margin: 0;
+  padding: 2rem;
+}
+.tagline {
+  padding: 1rem 2rem;
+}

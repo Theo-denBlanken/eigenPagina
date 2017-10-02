@@ -1,0 +1,20 @@
+.naarBoven {
+  text-align: right;
+  height: 3em;
+  &__link {
+    display: inline-block;
+    width: 2em;
+    font-family: Fontawesome;
+    text-decoration: none;
+    font-size: 2em;
+    color: $hoofdKleur;
+    margin-left: 2%;
+    padding: .5em 2rem 0 0;
+    transition: padding .5s;
+    &:hover {
+      color: $steunKleur;
+      padding: 0 2rem .5em 0;
+      color:$contrastKleur;
+    }
+  }
+}

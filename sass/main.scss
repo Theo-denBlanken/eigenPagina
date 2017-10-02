@@ -1,0 +1,23 @@
+@import 'components/kleuren';
+@import 'components/fonts';
+
+
+@import 'elements/basis';
+// html body main en footer
+@import 'elements/header';
+@import 'components/navigatie';
+
+@import 'components/inhoud';
+// 'inhoud' beschrijft de blokken met tekst en YT-filmpjes
+@import 'components/terugKnop';
+// een knop die naar boven linkt
+@import 'components/headerAnimatie';
+// een animaitie van de SVG-ringen
+@import 'components/social';
+// de social media-icons
+
+
+// mediaquery
+@media screen and (min-width: 50em) {
+  @import 'desktop';
+}

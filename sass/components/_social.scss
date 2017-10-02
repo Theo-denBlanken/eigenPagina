@@ -1,0 +1,27 @@
+/* de social icons met BEM */
+.social {
+  background: $hoofdKleur;
+  font-family: Fontawesome;  // voor de iconen
+  float: right;
+  &__item {
+    color: $achtergrondKleur;
+    display: inline-block;
+    font-size: 1em;
+    padding: .3em;
+    text-decoration: none;
+    &:first-child {
+      margin-left: .5em;
+    }
+    &:last-child {
+      margin-right: .5em;
+    }
+    &:hover {
+      background-color: $contrastKleur;
+      color: #fff;
+    }
+    &--twitter::before   { content: "\f081"; }
+    &--github::before    { content: "\f092"; }
+    &--facebook::before  { content: "\f082"; }
+    &--google::before    { content: "\f0d4"; }
+  }
+}

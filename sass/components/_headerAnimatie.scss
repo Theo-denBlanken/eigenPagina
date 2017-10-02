@@ -1,0 +1,12 @@
+/* de ringen   */
+.ringen {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.ring {
+  stroke: $steunKleur;
+  stroke-width: 6;
+  fill: none;
+  mix-blend-mode: lighten;
+}
