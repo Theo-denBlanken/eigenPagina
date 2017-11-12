@@ -1,12 +1,16 @@
 .nav {
+  display: block;
   &__list {
     display: flex;
   }
-  &__label {
-    display: none;
-  }
   &__cb:checked ~ .nav__list {
     display: flex;
+  }
+  &__labelText {
+    display: none; // het hamburgerteken
+  }
+  &__item {
+    // display: flex;
   }
 }
 

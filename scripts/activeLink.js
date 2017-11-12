@@ -14,6 +14,8 @@ const zetActiveOm = (el) => {
 for (let i=0; i<linkjes.length; i++) {
   linkjes[i].addEventListener('click', function() {
     zetActiveOm(this);
+    // als er op een linkje geklikt wordt, moet de cb gechect worden
+    document.getElementById('menu-toggle').checked=true;
   })
 }
 

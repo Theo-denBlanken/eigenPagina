@@ -19,11 +19,14 @@
     </header>
 
     <nav class="nav" id="nav">
-      <label for="menu-toggle" class="nav__label">&#xf0c9;</label>
+      <label for="menu-toggle" class="nav__label"><span class="nav__labelText">&#xf0c9;</span>
       <input type="checkbox" id="menu-toggle" class="nav__cb" checked>
       <ul class="nav__list">
         <li>
-          <a class="nav__item nav__item--active" href=index.html>home</a>
+          <a class="nav__item nav__item--active" href="index.html">home</a>
+        </li>
+        <li>
+          <a class="nav__item" href="#opdracht">de opdracht</a>
         </li>
         <li>
           <a class="nav__item" href="#centreren">centreren</a>
@@ -38,10 +41,11 @@
           <a class="nav__item" href="#sticky">stickey footer</a>
         </li>
       </ul>
+      </label>
     </nav>
     <main>
 
-      <div class="inhoud">
+      <div class="inhoud" id="opdracht">
         <article class="inhoud__tekst">
           <h3>Flexbox</h3>
           <p style="margin-top: 40px; padding-top: 10px; padding-bottom: 6em;">Een aantal oefeningen om practisch te oefenen met Flexbox.
@@ -72,7 +76,9 @@
             <br>
             In deze reeks passen we flexbox onder andere toe om te centreren, een grid te bouwen en een sticky footer.</p>
         </article>
-        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/ybh0uk8wiOM?rel=0"  allowfullscreen></iframe>
+        <section class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/ybh0uk8wiOM?rel=0"  allowfullscreen></iframe>
+        </section>
 
       </div>
 
@@ -99,8 +105,8 @@
           Voor smalle viewports kan het ook nodig zijn dat de elementen onder elkaar kunnen. Dat kan met
           <code>flex-wrap: wrap;</code>.
         </article>
-        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/htUVnmTUQgc?rel=0"  allowfullscreen></iframe>
-
+        <section class="inhoud__IF-houder"><iframe class="inhoud__iframe" src="http://www.youtube.com/embed/htUVnmTUQgc?rel=0"  allowfullscreen></iframe>
+          </section>
       </div>
 
       <div class="naarBoven">
@@ -130,7 +136,9 @@
             krijgt, zal de inhoud dus overal op dezelfde horizontale lijn komen. In dit voorbeeld zijn dat de media-icons.
           </p>
         </article>
-        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/O-5c2mf95MI?rel=0"  allowfullscreen></iframe>
+        <section class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/O-5c2mf95MI?rel=0"  allowfullscreen></iframe>
+        </section>
       </div>
 
       <div class="naarBoven">
@@ -147,7 +155,9 @@
             en ze transparant maken.
           </p>
         </article>
-        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/o4KDRLrzS2A?rel=0"  allowfullscreen></iframe>
+        <section class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/o4KDRLrzS2A?rel=0"  allowfullscreen></iframe>
+        </section>
       </div>
 
       <div class="naarBoven">
@@ -182,7 +192,9 @@
           <p>Pas deze kennis van de sticky footer ook toe op de index-pagina waar de validatie-icons onderaan moeten komen.</p>
           <p>Bonusopdracht: kun je zelf het Javascript zo schrijven dat je ook afwissellende inhoud met de knoppen kunt toevoegen?</p>
         </article>
-        <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/4s29raNJnEo?rel=0"  allowfullscreen></iframe>
+        <section class="inhoud__IF-houder">
+          <iframe class="inhoud__iframe" src="http://www.youtube.com/embed/4s29raNJnEo?rel=0"  allowfullscreen></iframe>
+        </section>
       </div>
 
       <div class="naarBoven">
@@ -246,7 +258,7 @@
 
     <script src="scripts/social.js"></script>
     <script src="scripts/headerAnimatie.js"></script>
-    <script src="scripts/hoogteYTframe.js"></script>
     <script src="scripts/activeLink.js"></script>
+    <script src="scripts/smoothScrolling.js"></script>
   </body>
 </html>

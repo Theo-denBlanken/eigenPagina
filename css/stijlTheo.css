@@ -43,16 +43,19 @@ h1 {
   background: #3646b0;
   transition: top 1s;
   position: relative;
-  top: auto; }
+  top: auto;
+  z-index: 1000; }
   .nav__label {
     font-family: Fontawesome;
     font-size: 1.5em;
     display: block;
-    color: whitesmoke;
-    padding: .2em .2em .2em 2rem;
     cursor: pointer; }
     .nav__label:hover {
       color: #fff; }
+  .nav__labelText {
+    color: whitesmoke;
+    padding: .4em .2em .4em 2rem;
+    display: inline-block; }
   .nav__list {
     margin: 0;
     padding: 0;
@@ -88,19 +91,28 @@ h1 {
 
 @keyframes schuifNavIn {
   0% {
-    top: -2em; }
+    top: -3em; }
   100% {
     top: 0; } }
 @keyframes schuifNavWeg {
   0% {
     top: 0; }
   100% {
-    top: -2em; } }
+    top: -3em; } }
 .inhoud {
   padding: 2rem; }
-  .inhoud__iframe {
+  .inhoud__IF-houder {
+    position: relative;
     width: 100%;
-    border: 0; }
+    height: 0;
+    padding-bottom: 56.25%; }
+  .inhoud__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    height: 100%; }
   .inhoud__a {
     color: #45558E; }
     .inhoud__ahover {
@@ -163,13 +175,15 @@ h1 {
     .social__item--google::before {
       content: "\f0d4"; }
 
-@media screen and (min-width: 50em) {
-  .nav__list {
-    display: flex; }
-  .nav__label {
-    display: none; }
-  .nav__cb:checked ~ .nav__list {
-    display: flex; }
+@media screen and (min-width: 60em) {
+  .nav {
+    display: block; }
+    .nav__list {
+      display: flex; }
+    .nav__cb:checked ~ .nav__list {
+      display: flex; }
+    .nav__labelText {
+      display: none; }
 
   .inhoud {
     display: grid;
